@@ -22,7 +22,10 @@ Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
-
+Plugin 'vim-airline/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'jpo/vim-railscasts-theme'
+Plugin 'gosukiwi/vim-atom-dark'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
