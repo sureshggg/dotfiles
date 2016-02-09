@@ -26,6 +26,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jpo/vim-railscasts-theme'
 Plugin 'gosukiwi/vim-atom-dark'
+Plugin 'nono/vim-handlebars'
+Plugin 'wesgibbs/vim-irblack'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
