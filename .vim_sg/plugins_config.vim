@@ -29,6 +29,7 @@ Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'nono/vim-handlebars'
 Plugin 'wesgibbs/vim-irblack'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

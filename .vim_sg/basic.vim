@@ -21,6 +21,10 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
+"show invisible chars
+set listchars
+nmap <leader>l :se list!<cr>
+
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
@@ -172,8 +176,8 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
+nnoremap <expr>j v:count ? 'j': 'gj'
+nnoremap <expr>k v:count ? 'k': 'gk'
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> :
@@ -234,6 +238,7 @@ endtry
 """"""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
+set number relativenumber
 
 " Format the status line
 " set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
