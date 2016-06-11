@@ -36,8 +36,8 @@ if has("gui_running")
     set background=dark
     colorscheme atom-dark-256
 else
-    colorscheme desert
-    let g:colors_name="desert"
+    colorscheme zenburn 
+    let g:colors_name="zenburn"
 endif
 
 
@@ -78,6 +78,7 @@ cnoremap <C-N> <Down>
 map ½ $
 cmap ½ $
 imap ½ $
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

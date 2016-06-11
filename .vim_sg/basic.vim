@@ -22,7 +22,6 @@ let g:mapleader = ","
 nmap <leader>w :w!<cr>
 
 "show invisible chars
-set listchars
 nmap <leader>l :se list!<cr>
 
 " :W sudo saves the file 
