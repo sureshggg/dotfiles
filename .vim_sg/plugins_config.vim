@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive' "Git releated
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-unimpaired'
 
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -75,3 +76,9 @@ let g:NERDTreeWinSize=35
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
 map <leader>nf :NERDTreeFind<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim tabline 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline#extensions#tabline#enabled = 1
+

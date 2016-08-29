@@ -7,6 +7,12 @@ then
 fi
 
 echo "Installing files..."
-cp -vR .vim_sg ~/
+if ! [[  -d ~/.vim_sg ]]
+then
+  ln -s .vim_sg ~/.vim_sg
+fi
+
+echo "Copying vimrc.."
+cp -v ~/.vimrc ~/.vimrc.vim_sg.bak
 cp -v vimrc ~/.vimrc
 echo "Done!"
