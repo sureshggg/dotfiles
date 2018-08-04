@@ -90,3 +90,4 @@ let g:airline#extensions#tabline#enabled = 1
 
 " vim-go
 let g:go_fmt_command = "goimports" 
+let g:go_version_warning = 0
