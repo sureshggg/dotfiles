@@ -6,13 +6,14 @@ then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
-echo "Installing files..."
-if ! [[  -d ~/.vim_sg ]]
+if [[ -f ~/.vimrc ]]
 then
-  ln -s .vim_sg ~/.vim_sg
+  echo "Backing up vimrc"
+  mv -v ~/.vimrc ~/.vimrc.suresh.bak
 fi
 
-echo "Copying vimrc.."
-cp -v ~/.vimrc ~/.vimrc.vim_sg.bak
-cp -v vimrc ~/.vimrc
+echo "Linking vimrc.."
+ln -s $PWD/vimrc ~/.vimrc
+ln -s $PWD/vim_plugin.vim ~/.vim_plugin.vim
+
 echo "Done!"

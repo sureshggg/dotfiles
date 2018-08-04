@@ -14,6 +14,7 @@ Plugin 'tpope/vim-fugitive' "Git releated
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-surround'
 
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -32,6 +33,11 @@ Plugin 'nono/vim-handlebars'
 Plugin 'wesgibbs/vim-irblack'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mattn/emmet-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'elixir-editors/vim-elixir' "elixir
+Plugin 'leafgarland/typescript-vim' " For Typescript
+Plugin 'fatih/vim-go'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -82,3 +88,5 @@ map <leader>nf :NERDTreeFind<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline#extensions#tabline#enabled = 1
 
+" vim-go
+let g:go_fmt_command = "goimports" 
