@@ -28,6 +28,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
 Plugin 'jpo/vim-railscasts-theme'
+Plugin 'dikiaap/minimalist'
 Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'nono/vim-handlebars'
 Plugin 'wesgibbs/vim-irblack'
@@ -38,6 +39,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'elixir-editors/vim-elixir' "elixir
 Plugin 'leafgarland/typescript-vim' " For Typescript
 Plugin 'fatih/vim-go'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -91,3 +93,5 @@ let g:airline#extensions#tabline#enabled = 1
 " vim-go
 let g:go_fmt_command = "goimports" 
 let g:go_version_warning = 0
+let g:go_addtags_transform = "camelcase"
+
