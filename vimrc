@@ -122,6 +122,7 @@ map <leader>tc :tabclose<cr>
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 map <leader>g :Ag
+map <leader>y "*y
 
 func! DeleteTrailingWS()
   exe "normal mz"
