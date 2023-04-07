@@ -56,8 +56,6 @@ cmp.setup({
 	sources = {
 		-- tabnine completion? yayaya
 
-		{ name = "cmp_tabnine" },
-
 		{ name = "nvim_lsp" },
 
 		-- For vsnip user.
@@ -72,28 +70,30 @@ cmp.setup({
 		{ name = "buffer" },
 
 		{ name = "youtube" },
+		{ name = "cmp_tabnine" },
 	},
 })
 
-local tabnine = require("cmp_tabnine.config")
-tabnine:setup({
-	max_lines = 1000,
-	max_num_results = 20,
-	sort = true,
-	run_on_every_keystroke = true,
-	snippet_placeholder = "..",
-})
+-- local tabnine = require("cmp_tabnine.config")
+-- tabnine:setup({
+-- 	max_lines = 1000,
+-- 	max_num_results = 20,
+-- 	sort = true,
+-- 	run_on_every_keystroke = true,
+-- 	snippet_placeholder = "..",
+-- })
 
 local function config(_config)
 	return vim.tbl_deep_extend("force", {
-		capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+		capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 		on_attach = function()
 			nnoremap("gd", function() vim.lsp.buf.definition() end)
+			nnoremap("gD", function() vim.lsp.buf.declaration() end)
 			nnoremap("K", function() vim.lsp.buf.hover() end)
 			nnoremap("<leader>vws", function() vim.lsp.buf.workspace_symbol() end)
 			nnoremap("<leader>vd", function() vim.diagnostic.open_float() end)
-			nnoremap("[d", function() vim.diagnostic.goto_next() end)
-			nnoremap("]d", function() vim.diagnostic.goto_prev() end)
+			nnoremap("]d", function() vim.diagnostic.goto_next() end)
+			nnoremap("[d", function() vim.diagnostic.goto_prev() end)
 			nnoremap("<leader>ca", function() vim.lsp.buf.code_action() end)
 			nnoremap("<leader>rr", function() vim.lsp.buf.references() end)
 			nnoremap("<leader>rn", function() vim.lsp.buf.rename() end)
@@ -124,7 +124,7 @@ require("lspconfig").sumneko.setup(config({
 
 
 require('lspconfig').emmet_ls.setup(config({
-    -- on_attach = on_attach,
+    on_attach = on_attach,
     capabilities = capabilities,
     filetypes = { 'html', 'javascript','typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
     init_options = {
@@ -217,3 +217,10 @@ require("luasnip.loaders.from_vscode").lazy_load({
 	include = nil, -- Load all languages
 	exclude = {},
 })
+
+require'lspconfig'.angularls.setup(config({}))
+-- require'lspconfig'.phpactor.setup(config({
+-- }))
+
+require'lspconfig'.intelephense.setup(config({
+}))

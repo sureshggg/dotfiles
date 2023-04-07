@@ -4,6 +4,7 @@ return require("packer").startup(function()
 
     -- Simple plugins can be specified as strings
     use("TimUntersberger/neogit")
+    use("tpope/vim-fugitive")
 
     -- depend scripts 
     use("nvim-lua/plenary.nvim") 
@@ -26,6 +27,9 @@ return require("packer").startup(function()
     use("saadparwaiz1/cmp_luasnip")
     use("williamboman/nvim-lsp-installer")
 
+    -- lint
+    use("mfussenegger/nvim-lint")
+
     -- Primeagen doesn"t create lodash
     use("ThePrimeagen/git-worktree.nvim")
     use("ThePrimeagen/harpoon")
@@ -47,8 +51,20 @@ return require("packer").startup(function()
     use("numToStr/Comment.nvim")
 
 
-    -- use("mfussenegger/nvim-dap")
-    -- use("rcarriga/nvim-dap-ui")
-    -- use("theHamsta/nvim-dap-virtual-text")
+    -- dev icons
+    use("nvim-tree/nvim-web-devicons")
+    -- Directory tree
+    use("nvim-tree/nvim-tree.lua")
+    -- rg 
+    use('jremmen/vim-ripgrep')
+    use('mattn/emmet-vim')
+    use('windwp/nvim-ts-autotag')
+
+    -- Debugging
+    use "mfussenegger/nvim-dap"
+    use "rcarriga/nvim-dap-ui"
+    use "theHamsta/nvim-dap-virtual-text"
+    use "nvim-telescope/telescope-dap.nvim"
+
 
 end)

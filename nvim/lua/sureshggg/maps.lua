@@ -19,6 +19,7 @@ vim.cmd([[tnoremap <C-j> <c-\><c-n><c-w>j]])
 vim.cmd([[tnoremap <C-k> <c-\><c-n><c-w>k]])
 vim.cmd([[tnoremap <C-l> <c-\><c-n><c-w>l]])
 vim.cmd([[tnoremap <C-l><c-l> <c-l>]])
+
 --[[
 " Insert mode:
 " inoremap <C-h> <Esc><c-w>h
@@ -39,11 +40,17 @@ vim.cmd([[nnoremap <C-l> <c-w>l]])
 
 --" mapping
 vim.cmd([[nmap <leader>w :w!<cr>]])
-vim.cmd([[nmap <leader>c :]])
+vim.cmd([[nmap <leader><leader> :]])
 vim.cmd([[nmap <leader>l :se list!<cr>]])
-vim.cmd([[map <leader>g :Ag]])
+vim.cmd([[map <leader>g :Telescope grep_string<cr>]])
 
 vim.cmd([[map <leader>t :Telescope ]])
-vim.cmd([[map <leader>f :Telescope find_files<cr>]])
-vim.cmd([[map <leader>b :Telescope buffers<cr>]])
+vim.cmd([[map <leader>f :Telescope find_files <cr>]])
+vim.cmd([[map <leader>b :lua require('telescope.builtin').buffers({sort_mru= true})<cr>]])
+vim.cmd([[map <leader>o :NvimTreeToggle<cr>]])
+
+vim.cmd([[map <leader>ss :e %:r.ts<tab><cr>]])
+vim.cmd([[map <leader>sh :e %:r.htm<tab><cr>]])
+vim.cmd([[map <leader>st :e %:r.spec<tab><cr>]])
+
 --]]
